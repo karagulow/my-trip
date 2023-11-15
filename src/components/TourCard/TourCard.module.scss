@@ -1,0 +1,38 @@
+@import '../../assets/scss/main.scss';
+
+.tour_card {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  background-color: rgba(249, 250, 251, 1);
+  padding: 25px;
+  width: 293px;
+
+  &Img {
+    width: 146px;
+    height: 146px;
+    margin: 0 auto;
+  }
+
+  &Title {
+    color: $text-color-first;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &Location {
+    color: $text-color-second;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &Price {
+    color: $accent-color;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+  }
+}

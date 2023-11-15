@@ -104,7 +104,18 @@ export const Footer = () => {
           </div>
           <div className={styles.footerWrapper__social}>
             <Link to="#" className={styles.footerWrapper__socialItem}>
-              T
+              <svg
+                width="17"
+                height="15"
+                viewBox="0 0 17 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.625 0.526947L13.9953 14.2557C13.9953 14.2557 13.6273 15.2076 12.6165 14.7511L6.549 9.9335L6.52087 9.91931C7.34045 9.15722 13.6958 3.23983 13.9736 2.97161C14.4036 2.55619 14.1367 2.30889 13.6374 2.62269L4.24969 8.79635L0.627934 7.53442C0.627934 7.53442 0.0579752 7.32447 0.00314374 6.86797C-0.0524091 6.41072 0.646691 6.16341 0.646691 6.16341L15.4115 0.165329C15.4115 0.165329 16.625 -0.386811 16.625 0.526947Z"
+                  fill="#6FFC2D"
+                />
+              </svg>
             </Link>
             <Link to="#" className={styles.footerWrapper__socialItem}>
               <svg

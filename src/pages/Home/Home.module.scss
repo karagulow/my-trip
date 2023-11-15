@@ -1,0 +1,458 @@
+@import '../../assets/scss/main.scss';
+
+.top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &Title {
+    display: flex;
+    // max-width: 960px;
+    margin: 96px 180px;
+    align-items: center;
+
+    color: $text-color-first;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &Advantages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 55px 0;
+    padding: 20px;
+    width: 100%;
+    height: 190px;
+
+    background-color: $bg-color-first;
+    border-radius: 10px;
+    box-shadow: 0px 30px 60px rgba(26, 26, 26, 0.1);
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      column-gap: 25px;
+      align-items: center;
+
+      &Icon {
+        display: flex;
+        justify-content: center;
+        background-color: $other-color-first;
+        border-radius: 50%;
+        min-width: 55px;
+        height: 55px;
+      }
+
+      &Text {
+        width: 205px;
+        color: $text-color-first;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.tours {
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  margin: 60px 0 10px;
+
+  &Top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+      color: $text-color-first;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    &__search {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 600px;
+
+      &Text {
+        color: $text-color-first;
+        margin-right: 15px;
+        margin-left: 40px;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  &List {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    row-gap: 60px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+.your_tour {
+  display: flex;
+  flex-direction: column;
+  margin: 140px 0;
+
+  &Text {
+    margin-bottom: 20px;
+    color: $text-color-first;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &Title {
+    margin-bottom: 90px;
+    color: $accent-color;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &About {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__stat {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 70px;
+      grid-row-gap: 50px;
+
+      &Item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 17px;
+        border: 2px dashed $accent-color;
+        border-radius: 8px;
+        min-width: 237px;
+        min-height: 219px;
+        max-width: 237px;
+        max-height: 219px;
+        text-align: center;
+        padding: 0 40px;
+
+        &__title {
+          color: $accent-color;
+          font-size: 60px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+
+        &__text {
+          color: $text-color-first;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    &__advantages {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &List {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        width: 605px;
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+
+          padding-left: 2rem;
+          background-image: url(../../assets/img/main/list-marker.svg);
+          background-position: 0 0;
+          background-size: 14px 14px;
+          background-repeat: no-repeat;
+
+          &Title {
+            color: $text-color-first;
+            font-size: 18px;
+            font-weight: 600;
+          }
+
+          &Text {
+            color: $text-color-first;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+
+      &Btn {
+        background-color: $accent-color;
+        border-radius: 8px;
+        width: 311px;
+        height: 41px;
+
+        color: #fff;
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.connection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 90px;
+  text-align: center;
+
+  &Title {
+    color: $text-color-first;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &Form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+
+    input {
+      border: 1px solid $accent-color;
+      border-radius: 8px;
+      padding: 10px;
+      width: 477px;
+      height: 40px;
+
+      color: $text-color-first;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    textarea {
+      border: 1px solid $accent-color;
+      border-radius: 8px;
+      padding: 10px;
+      min-width: 100%;
+      min-height: 200px;
+
+      color: $text-color-first;
+      font-size: 16px;
+      font-weight: 400;
+      resize: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &__btn {
+      background-color: $accent-color;
+      border-radius: 8px;
+      width: 311px;
+      height: 41px;
+      margin: 0 auto;
+
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .top {
+    &Advantages {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 30px;
+      grid-row-gap: 30px;
+
+      height: auto;
+      box-shadow: 0px 10px 30px rgba(26, 26, 26, 0.1);
+
+      &__item {
+        &Text {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .your_tour {
+    margin: 50px 0;
+
+    &Text {
+      font-size: 24px;
+    }
+
+    &Title {
+      margin-bottom: 50px;
+      font-size: 24px;
+    }
+
+    &About {
+      display: flex;
+      flex-direction: column;
+      row-gap: 50px;
+      justify-content: flex-start;
+
+      &__stat {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        row-gap: 30px;
+        justify-content: space-around;
+      }
+
+      &__advantages {
+        display: flex;
+        flex-direction: column;
+        row-gap: 50px;
+        justify-content: flex-start;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .tours {
+    row-gap: 50px;
+    margin: 0;
+    margin-bottom: 50px;
+
+    &Top {
+      &__search {
+        width: 500px;
+      }
+    }
+
+    &List {
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+      row-gap: 60px;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .top {
+    &Title {
+      margin: 96px 50px;
+      font-size: 24px;
+    }
+  }
+
+  .tours {
+    &Top {
+      flex-direction: column;
+      row-gap: 30px;
+      justify-content: flex-start;
+      align-items: start;
+
+      &__title {
+        text-align: left;
+        font-size: 24px;
+      }
+
+      &__search {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    &List {
+      display: flex;
+      flex-direction: row;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .top {
+    &Advantages {
+      grid-template-columns: 1fr;
+      grid-row-gap: 50px;
+
+      &__item {
+        &Text {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .your_tour {
+    &About {
+      &__advantages {
+        &List {
+          width: auto;
+
+          &__item {
+          }
+        }
+
+        &Btn {
+          width: 100%;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .connection {
+    row-gap: 50px;
+    text-align: start;
+
+    &Title {
+      font-size: 24px;
+    }
+
+    &Form {
+      width: 100%;
+
+      input {
+        width: auto;
+      }
+
+      &__btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .top {
+    &Title {
+      margin: 34px 0 50px;
+      text-align: left;
+    }
+  }
+}
