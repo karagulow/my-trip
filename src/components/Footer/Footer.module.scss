@@ -1,0 +1,133 @@
+@import '../../assets/scss/main.scss';
+
+.footer {
+  margin-top: auto;
+  background-color: $bg-color-second;
+  padding: 30px 0;
+
+  &Wrapper {
+    display: flex;
+    flex-direction: column;
+
+    &__about {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 35px;
+
+      &Item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        &__top {
+          color: $text-color-first;
+          font-size: 18px;
+          font-weight: 500;
+        }
+
+        &__bottom {
+          display: flex;
+          flex-direction: column;
+          row-gap: 20px;
+          color: $text-color-second;
+          font-size: 16px;
+          font-weight: 400;
+
+          p {
+            max-width: 280px;
+          }
+
+          &.fund {
+            display: flex;
+            flex-direction: row;
+            column-gap: 15px;
+            align-items: center;
+          }
+        }
+      }
+    }
+
+    &__social {
+      display: flex;
+      flex-direction: row;
+      column-gap: 16px;
+      margin-bottom: 60px;
+
+      &Item {
+        display: flex;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        background-color: $bg-color-first;
+        border-radius: 10px;
+        align-items: center;
+
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    &__copyright {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      color: $text-color-third;
+      font-size: 16px;
+      font-weight: 500;
+
+      a {
+        color: $text-color-third;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .footer {
+    margin-bottom: 70px;
+    &Wrapper {
+      &__about {
+        display: flex;
+        flex-direction: column;
+        row-gap: 38px;
+        justify-content: start;
+
+        &Item {
+          &__bottom {
+            &.fund {
+              flex-direction: column;
+              row-gap: 16px;
+              column-gap: 0;
+              align-items: start;
+            }
+          }
+        }
+      }
+
+      &__social {
+        column-gap: 26px;
+        margin-bottom: 38px;
+
+        &Item {
+          width: 59px;
+          height: 59px;
+
+          svg {
+            width: 29px;
+            height: 29px;
+          }
+        }
+      }
+
+      &__copyright {
+        flex-direction: column;
+        justify-content: start;
+        row-gap: 38px;
+      }
+    }
+  }
+}
