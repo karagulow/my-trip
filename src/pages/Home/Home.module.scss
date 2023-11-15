@@ -7,7 +7,6 @@
 
   &Title {
     display: flex;
-    // max-width: 960px;
     margin: 96px 180px;
     align-items: center;
 
@@ -80,17 +79,26 @@
       align-items: center;
       width: 600px;
 
-      &Text {
-        color: $text-color-first;
-        margin-right: 15px;
+      &Click {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        column-gap: 15px;
+        align-items: center;
         margin-left: 40px;
-        font-size: 18px;
-        font-weight: 700;
-      }
 
-      svg {
-        width: 30px;
-        height: 30px;
+        &__text {
+          color: $text-color-first;
+          font-size: 18px;
+          font-weight: 700;
+          cursor: pointer;
+        }
+
+        svg {
+          min-width: 30px;
+          min-height: 30px;
+          cursor: pointer;
+        }
       }
     }
   }
