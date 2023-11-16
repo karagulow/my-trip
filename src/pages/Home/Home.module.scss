@@ -81,23 +81,26 @@
 
       &Click {
         position: relative;
-        display: flex;
-        flex-direction: row;
-        column-gap: 15px;
-        align-items: center;
         margin-left: 40px;
 
-        &__text {
-          color: $text-color-first;
-          font-size: 18px;
-          font-weight: 700;
-          cursor: pointer;
-        }
+        &__item {
+          display: flex;
+          flex-direction: row;
+          column-gap: 15px;
+          align-items: center;
 
-        svg {
-          min-width: 30px;
-          min-height: 30px;
-          cursor: pointer;
+          &Text {
+            color: $text-color-first;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+          }
+
+          svg {
+            min-width: 30px;
+            min-height: 30px;
+            cursor: pointer;
+          }
         }
       }
     }

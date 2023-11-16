@@ -142,8 +142,11 @@ header {
       position: fixed;
       bottom: 0;
       width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      // display: grid;
+      // grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       padding: 12px 20px;
       height: 70px;
       align-items: center;

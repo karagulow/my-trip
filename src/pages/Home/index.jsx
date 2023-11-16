@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './Home.module.scss';
 
 import { Search } from '../../components/Search';
@@ -5,6 +6,22 @@ import { TourCard } from '../../components/TourCard';
 import { TourFilter } from '../../components/TourFilter';
 
 export const Home = () => {
+  const filterRef = React.useRef();
+  const [filterOpen, setFilterOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleClickFilterOutside = event => {
+      if (!event.composedPath().includes(filterRef.current)) {
+        setFilterOpen(false);
+      }
+    };
+
+    document.body.addEventListener('click', handleClickFilterOutside);
+    return () => {
+      document.body.removeEventListener('click', handleClickFilterOutside);
+    };
+  });
+
   return (
     <>
       <div className={styles.top}>
@@ -120,24 +137,33 @@ export const Home = () => {
           <h2 className={styles.toursTop__title}>Наши туры</h2>
           <div className={styles.toursTop__search}>
             <Search />
-            <div className={styles.toursTop__searchClick}>
-              <p className={styles.toursTop__searchClick__text}>Фильтры</p>
-              <svg
-                width="30"
-                height="31"
-                viewBox="0 0 30 31"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+            <div className={styles.toursTop__searchClick} ref={filterRef}>
+              <div
+                className={styles.toursTop__searchClick__item}
+                onClick={() => {
+                  setFilterOpen(!filterOpen);
+                }}
               >
-                <g id="ion:filter-sharp">
-                  <path
-                    id="Vector"
-                    d="M0.9375 7.53125H29.0625V10.3438H0.9375V7.53125ZM5.625 14.0938H24.375V16.9062H5.625V14.0938ZM11.25 20.6562H18.75V23.4688H11.25V20.6562Z"
-                    fill="#6FFC2D"
-                  />
-                </g>
-              </svg>
-              <TourFilter />
+                <p className={styles.toursTop__searchClick__itemText}>
+                  Фильтры
+                </p>
+                <svg
+                  width="30"
+                  height="31"
+                  viewBox="0 0 30 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="ion:filter-sharp">
+                    <path
+                      id="Vector"
+                      d="M0.9375 7.53125H29.0625V10.3438H0.9375V7.53125ZM5.625 14.0938H24.375V16.9062H5.625V14.0938ZM11.25 20.6562H18.75V23.4688H11.25V20.6562Z"
+                      fill="#6FFC2D"
+                    />
+                  </g>
+                </svg>
+              </div>
+              {filterOpen && <TourFilter />}
             </div>
           </div>
         </div>
