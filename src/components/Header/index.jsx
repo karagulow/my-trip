@@ -1,12 +1,33 @@
+import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 
 import styles from './Header.module.scss';
 import avatar from '../../assets/img/main/avatar.png';
+import { Notification } from '../Notification';
 
 const setActive = ({ isActive }) => (isActive ? styles.active : '');
 
 export const Header = () => {
+  const notificationRef = React.useRef();
+  const [notificationOpen, setNotificationOpen] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleClickNotificationOutside = event => {
+      if (!event.composedPath().includes(notificationRef.current)) {
+        setNotificationOpen(false);
+      }
+    };
+
+    document.body.addEventListener('click', handleClickNotificationOutside);
+    return () => {
+      document.body.removeEventListener(
+        'click',
+        handleClickNotificationOutside
+      );
+    };
+  });
+
   return (
     <header>
       <nav className={`${styles.nav} ${styles.fixedNavBar}`}>
@@ -100,8 +121,18 @@ export const Header = () => {
                 <Link className={styles.navRow__itemsList__item}>
                   Избранное
                 </Link>
-                <div className={styles.navRow__itemsList__item}>
-                  Уведомления
+                <div
+                  className={styles.navRow__itemsList__item}
+                  ref={notificationRef}
+                >
+                  <p
+                    onClick={() => {
+                      setNotificationOpen(!notificationOpen);
+                    }}
+                  >
+                    Уведомления
+                  </p>
+                  {notificationOpen && <Notification />}
                 </div>
               </div>
             </div>
