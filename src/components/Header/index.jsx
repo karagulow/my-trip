@@ -150,7 +150,13 @@ export const Header = () => {
       </nav>
 
       <nav className={styles.mobile_nav}>
-        <Link to="#" className={`${styles.mobile_navItem} ${styles.active}`}>
+        <NavLink
+          to="/"
+          className={setActive}
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           <svg
             width="25"
             height="24"
@@ -171,9 +177,15 @@ export const Header = () => {
               fill="#484C52"
             />
           </svg>
-          <p>Главная</p>
-        </Link>
-        <Link to="#" className={styles.mobile_navItem}>
+          {/* <p>Главная</p> */}
+        </NavLink>
+        <NavLink
+          to="/lk/tourist/id"
+          className={setActive}
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           <svg
             width="25"
             height="24"
@@ -186,9 +198,15 @@ export const Header = () => {
               fill="#484C52"
             />
           </svg>
-          <p>Путешественнику</p>
-        </Link>
-        <Link to="#" className={styles.mobile_navItem}>
+          {/* <p>Путешественнику</p> */}
+        </NavLink>
+        <NavLink
+          to="/lk/guide/id"
+          className={setActive}
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           <svg
             width="25"
             height="26"
@@ -213,9 +231,15 @@ export const Header = () => {
               </clipPath>
             </defs>
           </svg>
-          <p>Организатору</p>
-        </Link>
-        <Link to="#" className={styles.mobile_navItem}>
+          {/* <p>Организатору</p> */}
+        </NavLink>
+        <NavLink
+          to="/lk/tourist/id"
+          className={setActive}
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           <svg
             width="25"
             height="24"
@@ -228,9 +252,15 @@ export const Header = () => {
               fill="#484C52"
             />
           </svg>
-          <p>Избранное</p>
-        </Link>
-        <Link to="#" className={styles.mobile_navItem}>
+          {/* <p>Избранное</p> */}
+        </NavLink>
+        <NavLink
+          to="/notifications"
+          className={setActive}
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           <svg
             width="25"
             height="24"
@@ -243,8 +273,8 @@ export const Header = () => {
               fill="#484C52"
             />
           </svg>
-          <p>Уведомления</p>
-        </Link>
+          {/* <p>Уведомления</p> */}
+        </NavLink>
       </nav>
     </header>
   );
