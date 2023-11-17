@@ -1,0 +1,14 @@
+@import '../../assets/scss/main.scss';
+
+.arrowBtn {
+  display: flex;
+  justify-content: center;
+  min-width: 35px;
+  min-height: 35px;
+  max-width: 35px;
+  max-height: 35px;
+  border-radius: 3px;
+  background-color: $accent-color;
+  box-shadow: 0px 11.375px 15.75px 0px rgba(17, 19, 35, 0.08);
+  cursor: pointer;
+}

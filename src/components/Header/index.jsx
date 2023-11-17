@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import classNames from 'classnames';
 
 import styles from './Header.module.scss';
-import avatar from '../../assets/img/main/avatar.png';
+import avatar from '../../assets/img/photo/avatar.jpeg';
 import { Notification } from '../Notification';
 
 const setActive = ({ isActive }) => (isActive ? styles.active : '');
