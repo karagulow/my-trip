@@ -1,13 +1,24 @@
+import { useNavigate } from 'react-router-dom';
+
 import styles from './TouristPage.module.scss';
 import avatar from '../../assets/img/photo/avatar.jpeg';
 import { ArrowLeftBtn } from '../../components/ArrowBtn';
 import { TourList } from '../../components/TourList';
 
 export const TouristPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.account}>
       <div className={styles.accountTop}>
-        <ArrowLeftBtn />
+        <div
+          onClick={() => {
+            navigate(-1);
+            window.scrollTo(0, 0);
+          }}
+        >
+          <ArrowLeftBtn />
+        </div>
         <h3 className={styles.accountTop__title}>Личный кабинет</h3>
       </div>
       <div className={styles.accountAbout}>
@@ -28,8 +39,8 @@ export const TouristPage = () => {
         </div>
       </div>
       <div className={styles.accountTours}>
-        <TourList />
-        <TourList />
+        <TourList title="Купленные туры" isBought={true} />
+        <TourList title="Избранное" />
       </div>
     </div>
   );
