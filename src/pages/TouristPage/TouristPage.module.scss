@@ -1,0 +1,124 @@
+@import '../../assets/scss/main.scss';
+
+.account {
+  display: flex;
+  flex-direction: column;
+
+  &Top {
+    display: flex;
+    flex-direction: row;
+    column-gap: 21px;
+    margin: 70px 0;
+
+    &__title {
+      color: $text-color-first;
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+
+  &About {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 33px;
+    margin-bottom: 23px;
+
+    border-radius: 7px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+
+    &__data {
+      display: flex;
+      flex-direction: row;
+      column-gap: 40px;
+
+      &Avatar {
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+      }
+
+      &Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__name {
+          color: $text-color-first;
+          font-size: 28px;
+          font-weight: 500;
+        }
+
+        &__balance {
+          color: $text-color-first;
+          font-size: 28px;
+          font-weight: 500;
+
+          span {
+            color: $accent-color;
+            font-size: 32px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  &Tours {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 850px) {
+  .account {
+    &Top {
+      column-gap: 18px;
+      margin: 30px 0;
+
+      &__title {
+        font-size: 24px;
+      }
+    }
+
+    &About {
+      padding: 23px;
+      margin-bottom: 25px;
+
+      &__data {
+        column-gap: 25px;
+
+        &Avatar {
+          width: 74px;
+          height: 74px;
+        }
+
+        &Right {
+          &__name {
+            font-size: 16px;
+          }
+
+          &__balance {
+            font-size: 16px;
+
+            span {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .account {
+    &Tours {
+      flex-direction: column;
+      row-gap: 25px;
+    }
+  }
+}

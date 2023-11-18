@@ -36,3 +36,29 @@
     font-weight: 900;
   }
 }
+
+@media (max-width: 1000px) {
+  .tour_card {
+    row-gap: 6px;
+
+    padding: 15px;
+    width: auto;
+
+    &Img {
+      width: 85px;
+      height: 85px;
+    }
+
+    &Title {
+      font-size: 12px;
+    }
+
+    &Location {
+      font-size: 10px;
+    }
+
+    &Price {
+      font-size: 24px;
+    }
+  }
+}

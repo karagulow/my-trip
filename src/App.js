@@ -5,6 +5,7 @@ import { MainLayout } from './layouts/MainLayout';
 import { Home } from './pages/Home';
 import { NotificationMobile } from './pages/NotificationMobile';
 import { TourPage } from './pages/TourPage';
+import { TouristPage } from './pages/TouristPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="" element={<Home />} />
         <Route path="notifications" element={<NotificationMobile />} />
         <Route path="tour" element={<TourPage />} />
+        <Route path="lk/tourist/id" element={<TouristPage />} />
       </Route>
     </Routes>
   );

@@ -33,7 +33,13 @@ export const Header = () => {
       <nav className={`${styles.nav} ${styles.fixedNavBar}`}>
         <div className="container">
           <div className={styles.navRow}>
-            <Link to="/" className={styles.navRow__logo}>
+            <Link
+              to="/"
+              className={styles.navRow__logo}
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+            >
               <svg
                 width="201"
                 height="32"
