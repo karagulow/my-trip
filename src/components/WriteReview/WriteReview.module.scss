@@ -1,0 +1,110 @@
+@import '../../assets/scss/main.scss';
+
+.write_review {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 11;
+  overflow-y: hidden;
+
+  &Block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 140px;
+    padding: 50px 60px;
+
+    width: 574px;
+
+    background-color: #fff;
+    border: 3px dashed $accent-color;
+    border-radius: 8px;
+
+    &__close {
+      margin: 0 auto;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    &__title {
+      color: $text-color-first;
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 43px;
+
+      &Text {
+        border: 1px solid $accent-color;
+        border-radius: 12px;
+        padding: 15px 25px;
+
+        min-width: 100%;
+        max-width: 100%;
+
+        min-height: 382px;
+        max-height: 382px;
+
+        color: $text-color-first;
+        font-size: 16px;
+        font-weight: 400;
+        resize: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &Btn {
+        background-color: $accent-color;
+        border-radius: 12px;
+        padding: 15px 46px;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .write_review {
+    &Block {
+      top: 70px;
+      padding: 30px 40px;
+
+      width: 90%;
+
+      &__title {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      &__form {
+        row-gap: 26px;
+
+        &Text {
+          padding: 10px 15px;
+          min-height: 300px;
+          max-height: 300px;
+        }
+
+        &Btn {
+          padding: 10px 30px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

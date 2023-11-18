@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import styles from './TouristPage.module.scss';
 import avatar from '../../assets/img/photo/avatar.jpeg';
@@ -32,9 +32,9 @@ export const TouristPage = () => {
             <p className={styles.accountAbout__dataRight__name}>
               Иванова Инна Михайловна
             </p>
-            <p className={styles.accountAbout__dataRight__balance}>
+            <Link to="#" className={styles.accountAbout__dataRight__balance}>
               Баланс: <span>0 руб</span>
-            </p>
+            </Link>
           </div>
         </div>
       </div>
