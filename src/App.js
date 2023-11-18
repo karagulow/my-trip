@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { NotificationMobile } from './pages/NotificationMobile';
 import { TourPage } from './pages/TourPage';
 import { TouristPage } from './pages/TouristPage';
+import { TouristBalance } from './pages/TouristBalance';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="notifications" element={<NotificationMobile />} />
         <Route path="tour" element={<TourPage />} />
         <Route path="lk/tourist/id" element={<TouristPage />} />
+        <Route path="lk/tourist/balance" element={<TouristBalance />} />
       </Route>
     </Routes>
   );

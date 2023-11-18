@@ -32,8 +32,11 @@ export const TouristPage = () => {
             <p className={styles.accountAbout__dataRight__name}>
               Иванова Инна Михайловна
             </p>
-            <Link to="#" className={styles.accountAbout__dataRight__balance}>
-              Баланс: <span>0 руб</span>
+            <Link
+              to="/lk/tourist/balance"
+              className={styles.accountAbout__dataRight__balance}
+            >
+              Баланс: <span>4000 руб</span>
             </Link>
           </div>
         </div>
