@@ -1,18 +1,20 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import styles from './TouristBalance.module.scss';
+import styles from './GuideBalance.module.scss';
 import { ArrowLeftBtn } from '../../components/ArrowBtn';
 import { BalanceReplenishment } from '../../components/BalanceReplenishment';
 import { BalanceReplenishmentCheck } from '../../components/BalanceReplenishmentCheck';
 
-export const TouristBalance = () => {
+export const GuideBalance = () => {
   const navigate = useNavigate();
 
   const [balanceReplenishmentOpen, setBalanceReplenishmentOpen] =
     React.useState(false);
   const [balanceReplenishmentCheckOpen, setBalanceReplenishmentCheckOpen] =
     React.useState(false);
+
+  const [subsActive, setSubsActive] = React.useState(false);
 
   balanceReplenishmentOpen || balanceReplenishmentCheckOpen
     ? (document.body.style.overflow = 'hidden')
@@ -46,6 +48,7 @@ export const TouristBalance = () => {
             >
               Пополнить
             </button>
+
             {balanceReplenishmentOpen && (
               <BalanceReplenishment
                 setBalanceReplenishmentOpen={setBalanceReplenishmentOpen}
@@ -61,6 +64,51 @@ export const TouristBalance = () => {
                 }
               />
             )}
+
+            <button className={styles.balanceBlock__aboutItem__withdraw}>
+              Вывести деньги
+            </button>
+            <div className={styles.balanceBlock__aboutItem__subs}>
+              <h3 className={styles.balanceBlock__aboutItem__subsTitle}>
+                Подписка:
+                {subsActive ? (
+                  <span
+                    className={
+                      styles.balanceBlock__aboutItem__subsTitle__active
+                    }
+                  >
+                    активна
+                  </span>
+                ) : (
+                  <span
+                    className={
+                      styles.balanceBlock__aboutItem__subsTitle__not_active
+                    }
+                  >
+                    неактивна
+                  </span>
+                )}
+              </h3>
+              {subsActive ? (
+                <button
+                  className={styles.balanceBlock__aboutItem__subsBtn_active}
+                  onClick={() => {
+                    setSubsActive(false);
+                  }}
+                >
+                  Отменить подписку
+                </button>
+              ) : (
+                <button
+                  className={styles.balanceBlock__aboutItem__subsBtn_not_active}
+                  onClick={() => {
+                    setSubsActive(true);
+                  }}
+                >
+                  Подключить подписку
+                </button>
+              )}
+            </div>
           </div>
         </div>
         <div className={styles.balanceBlock__history}>

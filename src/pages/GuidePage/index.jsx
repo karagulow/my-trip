@@ -33,7 +33,7 @@ export const GuidePage = () => {
               Иванова Инна Михайловна
             </p>
             <Link
-              to="/lk/tourist/balance"
+              to="/lk/guide/balance"
               className={styles.accountAbout__dataRight__balance}
             >
               Баланс: <span>4000 руб</span>

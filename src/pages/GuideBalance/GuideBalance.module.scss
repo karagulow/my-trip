@@ -1,0 +1,286 @@
+@import '../../assets/scss/main.scss';
+
+.balance {
+  display: flex;
+  flex-direction: column;
+
+  &Top {
+    display: flex;
+    flex-direction: row;
+    column-gap: 21px;
+    margin: 70px 0;
+
+    &__title {
+      color: $text-color-first;
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+
+  &Block {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    justify-content: space-between;
+    padding: 50px 35px;
+    border-radius: 7px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+
+    &__about {
+      display: flex;
+      flex-direction: column;
+      row-gap: 140px;
+
+      &Item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+
+        &__text {
+          color: $text-color-first;
+          font-size: 38px;
+          font-weight: 500;
+
+          span {
+            color: $accent-color;
+            font-size: 43px;
+            font-weight: 700;
+          }
+        }
+
+        &__replenish {
+          padding: 15px 45px;
+          background-color: $accent-color;
+          border-radius: 12px;
+
+          color: #fff;
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+        &__withdraw {
+          padding: 15px 45px;
+          border: 1px solid $accent-color;
+          border-radius: 12px;
+
+          color: $text-color-third;
+          font-size: 24px;
+          font-weight: 700;
+        }
+
+        &__subs {
+          display: flex;
+          flex-direction: column;
+          row-gap: 44px;
+
+          &Title {
+            color: $text-color-first;
+            font-size: 38px;
+            font-weight: 500;
+
+            &__active {
+              margin-left: 20px;
+              color: $accent-color;
+              font-size: 24px;
+              font-weight: 600;
+            }
+
+            &__not_active {
+              margin-left: 20px;
+              color: $text-color-first;
+              font-size: 24px;
+              font-weight: 600;
+            }
+          }
+
+          &Btn_active {
+            border-radius: 12px;
+            border: 1.5px solid $accent-color;
+            height: 58px;
+
+            color: $text-color-third;
+            font-size: 24px;
+            font-weight: 700;
+          }
+
+          &Btn_not_active {
+            border-radius: 12px;
+            background-color: $accent-color;
+            height: 58px;
+
+            color: #fff;
+            font-size: 24px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    &__history {
+      display: flex;
+      flex-direction: column;
+      row-gap: 40px;
+
+      &Title {
+        color: $text-color-first;
+        font-size: 38px;
+        font-weight: 500;
+      }
+
+      &List {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          row-gap: 50px;
+
+          width: 100%;
+          padding: 30px;
+
+          border-radius: 8px;
+          border: 2px dashed $accent-color;
+
+          &About {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            column-gap: 80px;
+            justify-content: space-between;
+
+            &__text {
+              color: $text-color-first;
+              font-size: 24px;
+              font-weight: 400;
+            }
+
+            &__date {
+              color: $text-color-second;
+              font-size: 16px;
+              font-weight: 600;
+            }
+          }
+
+          &Number {
+            color: $accent-color;
+            font-size: 43px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .balance {
+    &Block {
+      flex-direction: column;
+      row-gap: 50px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .balance {
+    &Top {
+      column-gap: 16px;
+      margin: 30px 0;
+
+      &__title {
+        font-size: 24px;
+      }
+    }
+
+    &Block {
+      padding: 20px 15px;
+
+      &__about {
+        &Item {
+          row-gap: 30px;
+
+          &__text {
+            font-size: 18px;
+
+            span {
+              font-size: 20px;
+            }
+          }
+
+          &__replenish {
+            padding: 10px 30px;
+
+            font-size: 16px;
+          }
+
+          &__withdraw {
+            padding: 10px 30px;
+
+            font-size: 16px;
+          }
+
+          &__subs {
+            row-gap: 30px;
+
+            &Title {
+              font-size: 18px;
+
+              &__active {
+                margin-left: 10px;
+                font-size: 16px;
+              }
+
+              &__not_active {
+                margin-left: 10px;
+                font-size: 16px;
+              }
+            }
+
+            &Btn_active {
+              height: 37px;
+              font-size: 16px;
+            }
+
+            &Btn_not_active {
+              height: 37px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      &__history {
+        row-gap: 30px;
+
+        &Title {
+          font-size: 18px;
+        }
+
+        &List {
+          &__item {
+            row-gap: 20px;
+            padding: 20px;
+
+            &About {
+              column-gap: 20px;
+
+              &__text {
+                font-size: 16px;
+              }
+
+              &__date {
+                font-size: 14px;
+              }
+            }
+
+            &Number {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
