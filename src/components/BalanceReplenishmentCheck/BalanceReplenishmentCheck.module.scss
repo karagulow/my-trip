@@ -1,1 +1,165 @@
 @import '../../assets/scss/main.scss';
+
+.balance_replenish {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 11;
+  overflow-y: hidden;
+
+  &Block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 120px;
+    padding: 50px 60px;
+
+    width: 574px;
+
+    background-color: #fff;
+    border: 3px dashed $accent-color;
+    border-radius: 8px;
+
+    &__close {
+      position: absolute;
+      right: 60px;
+      cursor: pointer;
+      width: 20px;
+      height: 20px;
+    }
+
+    &__title {
+      color: $text-color-first;
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 50px;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 28px;
+      margin-bottom: 58px;
+
+      &Item {
+        color: $text-color-first;
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+
+    &__text {
+      color: $text-color-third;
+      font-size: 16px;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+
+      &Input {
+        border: 1px solid $accent-color;
+        border-radius: 12px;
+        padding: 15px 25px;
+        margin-bottom: 16px;
+
+        color: $text-color-first;
+        font-size: 25px;
+        font-weight: 400;
+      }
+
+      &Text {
+        color: $text-color-third;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 50px;
+
+        span {
+          color: $accent-color;
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 48px;
+        }
+      }
+
+      &Btn {
+        background-color: $accent-color;
+        border-radius: 12px;
+        height: 61px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .balance_replenish {
+    &Block {
+      top: 70px;
+      padding: 28px 38px;
+
+      width: 90%;
+
+      &__close {
+        right: 36px;
+        width: 15px;
+        height: 15px;
+      }
+
+      &__title {
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      &__list {
+        row-gap: 15px;
+        margin-bottom: 33px;
+
+        &Item {
+          font-size: 16px;
+        }
+      }
+
+      &__text {
+        font-size: 10px;
+        margin-bottom: 9px;
+      }
+
+      &__form {
+        &Input {
+          padding: 10px 15px;
+          margin-bottom: 10px;
+
+          font-size: 16px;
+        }
+
+        &Text {
+          font-size: 10px;
+          margin-bottom: 30px;
+
+          span {
+            font-size: 12px;
+            font-weight: 700;
+          }
+        }
+
+        &Btn {
+          height: 37px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

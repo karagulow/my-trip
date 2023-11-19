@@ -4,12 +4,19 @@ import { useNavigate, Link } from 'react-router-dom';
 import styles from './TouristBalance.module.scss';
 import { ArrowLeftBtn } from '../../components/ArrowBtn';
 import { BalanceReplenishment } from '../../components/BalanceReplenishment';
+import { BalanceReplenishmentCheck } from '../../components/BalanceReplenishmentCheck';
 
 export const TouristBalance = () => {
   const navigate = useNavigate();
 
   const [balanceReplenishmentOpen, setBalanceReplenishmentOpen] =
     React.useState(false);
+  const [balanceReplenishmentCheckOpen, setBalanceReplenishmentCheckOpen] =
+    React.useState(false);
+
+  balanceReplenishmentOpen || balanceReplenishmentCheckOpen
+    ? (document.body.style.overflow = 'hidden')
+    : (document.body.style.overflow = 'auto');
 
   return (
     <div className={styles.balance}>
@@ -42,6 +49,16 @@ export const TouristBalance = () => {
             {balanceReplenishmentOpen && (
               <BalanceReplenishment
                 setBalanceReplenishmentOpen={setBalanceReplenishmentOpen}
+                setBalanceReplenishmentCheckOpen={
+                  setBalanceReplenishmentCheckOpen
+                }
+              />
+            )}
+            {balanceReplenishmentCheckOpen && (
+              <BalanceReplenishmentCheck
+                setBalanceReplenishmentCheckOpen={
+                  setBalanceReplenishmentCheckOpen
+                }
               />
             )}
           </div>

@@ -5,7 +5,10 @@ const cardNumberMask = '0000 0000 0000 0000';
 const cardPeriodMask = '00/00';
 const cardCvcMask = '000';
 
-export const BalanceReplenishment = ({ setBalanceReplenishmentOpen }) => {
+export const BalanceReplenishment = ({
+  setBalanceReplenishmentOpen,
+  setBalanceReplenishmentCheckOpen,
+}) => {
   return (
     <div className={styles.balance_replenish}>
       <div className={styles.balance_replenishBlock}>
@@ -63,7 +66,13 @@ export const BalanceReplenishment = ({ setBalanceReplenishmentOpen }) => {
             />
           </div>
         </form>
-        <button className={styles.balance_replenishBlock__btn}>
+        <button
+          className={styles.balance_replenishBlock__btn}
+          onClick={() => {
+            setBalanceReplenishmentOpen(false);
+            setBalanceReplenishmentCheckOpen(true);
+          }}
+        >
           Пополнить баланс
         </button>
       </div>
