@@ -7,6 +7,7 @@ import { NotificationMobile } from './pages/NotificationMobile';
 import { TourPage } from './pages/TourPage';
 import { TouristPage } from './pages/TouristPage';
 import { TouristBalance } from './pages/TouristBalance';
+import { GuidePage } from './pages/GuidePage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="tour" element={<TourPage />} />
         <Route path="lk/tourist/id" element={<TouristPage />} />
         <Route path="lk/tourist/balance" element={<TouristBalance />} />
+        <Route path="lk/guide/id" element={<GuidePage />} />
       </Route>
     </Routes>
   );

@@ -1,0 +1,342 @@
+@import '../../assets/scss/main.scss';
+
+.account {
+  display: flex;
+  flex-direction: column;
+
+  &Top {
+    display: flex;
+    flex-direction: row;
+    column-gap: 21px;
+    margin: 70px 0;
+
+    &__title {
+      color: $text-color-first;
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+
+  &About {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    padding: 33px;
+    margin-bottom: 23px;
+
+    border-radius: 7px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+
+    &__btn {
+      background-color: $accent-color;
+      border-radius: 7px;
+      height: 33px;
+      width: 209px;
+
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &__data {
+      display: flex;
+      flex-direction: row;
+      column-gap: 40px;
+
+      &Avatar {
+        width: 125px;
+        height: 125px;
+        border-radius: 50%;
+      }
+
+      &Right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &__name {
+          color: $text-color-first;
+          font-size: 28px;
+          font-weight: 500;
+        }
+
+        &__balance {
+          color: $text-color-first;
+          font-size: 28px;
+          font-weight: 500;
+
+          span {
+            color: $accent-color;
+            font-size: 32px;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  &Tours {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 23px;
+
+    &__analytics {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 7px;
+      box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+      padding: 33px;
+      width: 100%;
+      min-height: 100%;
+
+      &Title {
+        color: $text-color-first;
+        font-size: 28px;
+        font-weight: 500;
+      }
+
+      &List {
+        display: flex;
+        flex-direction: column;
+        row-gap: 39px;
+
+        &__item {
+          display: flex;
+          flex-direction: column;
+          row-gap: 15px;
+
+          &Count {
+            color: $accent-color;
+            font-size: 36px;
+            font-weight: 700;
+          }
+
+          &Text {
+            color: $text-color-first;
+            font-size: 18px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+
+  &Clients {
+    display: flex;
+    flex-direction: column;
+    row-gap: 27px;
+    padding: 33px;
+
+    border-radius: 7px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25);
+
+    &__title {
+      color: $text-color-first;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+
+      &Item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        column-gap: 20px;
+        width: 532px;
+        height: 112px;
+        padding: 23px 29px;
+
+        border-radius: 8px;
+        border: 2px dashed $accent-color;
+
+        &__left {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          &Title {
+            color: $text-color-first;
+            font-size: 20px;
+            font-weight: 500;
+          }
+
+          &Name {
+            color: $text-color-first;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+
+        &__right {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          &Date {
+            color: $text-color-third;
+            font-size: 14px;
+            font-weight: 600;
+          }
+
+          &Phone {
+            color: $text-color-first;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .account {
+    &Tours {
+      &__analytics {
+        row-gap: 20px;
+
+        &Title {
+          font-size: 24px;
+        }
+
+        &List {
+          row-gap: 30px;
+
+          &__item {
+            row-gap: 10px;
+
+            &Count {
+              font-size: 28px;
+            }
+
+            &Text {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .account {
+    &Top {
+      column-gap: 18px;
+      margin: 30px 0;
+
+      &__title {
+        font-size: 24px;
+      }
+    }
+
+    &About {
+      padding: 23px;
+      margin-bottom: 25px;
+
+      &__data {
+        column-gap: 25px;
+
+        &Avatar {
+          width: 74px;
+          height: 74px;
+        }
+
+        &Right {
+          &__name {
+            font-size: 16px;
+          }
+
+          &__balance {
+            font-size: 16px;
+
+            span {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+
+    &Tours {
+      &__analytics {
+        padding: 20px 18px;
+        min-height: auto;
+
+        &Title {
+          font-size: 18px;
+        }
+
+        &List {
+          row-gap: 30px;
+
+          &__item {
+            &Count {
+              font-size: 24px;
+            }
+
+            &Text {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    &Clients {
+      padding: 20px;
+
+      &__title {
+        font-size: 16px;
+      }
+
+      &__list {
+        &Item {
+          flex-direction: column;
+          row-gap: 20px;
+          width: 100%;
+          height: auto;
+          padding: 17px 22px;
+
+          &__left {
+            row-gap: 20px;
+
+            &Title {
+              font-size: 18px;
+            }
+
+            &Name {
+              font-size: 16px;
+            }
+          }
+
+          &__right {
+            row-gap: 20px;
+
+            &Date {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .account {
+    &Tours {
+      flex-direction: column;
+      row-gap: 25px;
+    }
+  }
+}
