@@ -107,6 +107,7 @@ export const Header = () => {
             <div className={styles.navRow__items}>
               <div className={styles.navRow__itemsList}>
                 <NavLink
+                  to="/lk/tourist/id"
                   className={classNames(
                     styles.navRow__itemsList__item,
                     setActive
@@ -115,6 +116,7 @@ export const Header = () => {
                   Путешественнику
                 </NavLink>
                 <NavLink
+                  to="/lk/guide/id"
                   className={classNames(
                     styles.navRow__itemsList__item,
                     setActive
@@ -124,7 +126,10 @@ export const Header = () => {
                 </NavLink>
               </div>
               <div className={styles.navRow__itemsList}>
-                <Link className={styles.navRow__itemsList__item}>
+                <Link
+                  to="/lk/tourist/id"
+                  className={styles.navRow__itemsList__item}
+                >
                   Избранное
                 </Link>
                 <div

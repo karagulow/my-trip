@@ -90,7 +90,7 @@
           &About {
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: start;
             column-gap: 80px;
             justify-content: space-between;
 
@@ -111,6 +111,83 @@
             color: $accent-color;
             font-size: 43px;
             font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .balance {
+    &Block {
+      flex-direction: column;
+      row-gap: 50px;
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .balance {
+    &Top {
+      column-gap: 16px;
+      margin: 30px 0;
+
+      &__title {
+        font-size: 24px;
+      }
+    }
+
+    &Block {
+      padding: 20px 15px;
+
+      &__about {
+        &Item {
+          row-gap: 30px;
+
+          &__text {
+            font-size: 18px;
+
+            span {
+              font-size: 20px;
+            }
+          }
+
+          &__replenish {
+            padding: 10px 30px;
+
+            font-size: 16px;
+          }
+        }
+      }
+
+      &__history {
+        row-gap: 30px;
+
+        &Title {
+          font-size: 18px;
+        }
+
+        &List {
+          &__item {
+            row-gap: 20px;
+            padding: 20px;
+
+            &About {
+              column-gap: 20px;
+
+              &__text {
+                font-size: 16px;
+              }
+
+              &__date {
+                font-size: 14px;
+              }
+            }
+
+            &Number {
+              font-size: 32px;
+            }
           }
         }
       }
