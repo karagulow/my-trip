@@ -1,10 +1,15 @@
+import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
 import styles from './TouristBalance.module.scss';
 import { ArrowLeftBtn } from '../../components/ArrowBtn';
+import { BalanceReplenishment } from '../../components/BalanceReplenishment';
 
 export const TouristBalance = () => {
   const navigate = useNavigate();
+
+  const [balanceReplenishmentOpen, setBalanceReplenishmentOpen] =
+    React.useState(false);
 
   return (
     <div className={styles.balance}>
@@ -26,9 +31,19 @@ export const TouristBalance = () => {
             <h3 className={styles.balanceBlock__aboutItem__text}>
               Баланс: <span>4000 руб</span>
             </h3>
-            <button className={styles.balanceBlock__aboutItem__replenish}>
+            <button
+              className={styles.balanceBlock__aboutItem__replenish}
+              onClick={() => {
+                setBalanceReplenishmentOpen(true);
+              }}
+            >
               Пополнить
             </button>
+            {balanceReplenishmentOpen && (
+              <BalanceReplenishment
+                setBalanceReplenishmentOpen={setBalanceReplenishmentOpen}
+              />
+            )}
           </div>
         </div>
         <div className={styles.balanceBlock__history}>
