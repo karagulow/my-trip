@@ -1,0 +1,19 @@
+@import '../../assets/scss/main.scss';
+
+.create_tour {
+  display: flex;
+  flex-direction: column;
+
+  &Top {
+    display: flex;
+    flex-direction: row;
+    column-gap: 21px;
+    margin: 70px 0;
+
+    &__title {
+      color: $text-color-first;
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+}

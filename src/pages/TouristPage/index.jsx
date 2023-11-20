@@ -35,6 +35,9 @@ export const TouristPage = () => {
             <Link
               to="/lk/tourist/balance"
               className={styles.accountAbout__dataRight__balance}
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
             >
               Баланс: <span>4000 руб</span>
             </Link>

@@ -9,6 +9,7 @@ import { TouristPage } from './pages/TouristPage';
 import { TouristBalance } from './pages/TouristBalance';
 import { GuidePage } from './pages/GuidePage';
 import { GuideBalance } from './pages/GuideBalance';
+import { CreateTour } from './pages/CreateTour';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="lk/tourist/balance" element={<TouristBalance />} />
         <Route path="lk/guide/id" element={<GuidePage />} />
         <Route path="lk/guide/balance" element={<GuideBalance />} />
+        <Route path="create-tour" element={<CreateTour />} />
       </Route>
     </Routes>
   );

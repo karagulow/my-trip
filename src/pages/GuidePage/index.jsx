@@ -35,12 +35,17 @@ export const GuidePage = () => {
             <Link
               to="/lk/guide/balance"
               className={styles.accountAbout__dataRight__balance}
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
             >
               Баланс: <span>4000 руб</span>
             </Link>
           </div>
         </div>
-        <button className={styles.accountAbout__btn}>Создать тур</button>
+        <Link to="/create-tour" className={styles.accountAbout__btn}>
+          Создать тур
+        </Link>
       </div>
       <div className={styles.accountTours}>
         <div className={styles.accountTours__analytics}>
