@@ -1,12 +1,12 @@
-import styles from './Login.module.scss';
+import styles from './Register.module.scss';
 
-export const Login = ({ setLoginOpen, setRegisterOpen }) => {
+export const Register = ({ setRegisterOpen }) => {
   return (
-    <div className={styles.login}>
-      <div className={styles.loginBlock}>
+    <div className={styles.register}>
+      <div className={styles.registerBlock}>
         <div
-          className={styles.loginBlock__close}
-          onClick={() => setLoginOpen(false)}
+          className={styles.registerBlock__close}
+          onClick={() => setRegisterOpen(false)}
         >
           <svg
             width="20"
@@ -21,33 +21,37 @@ export const Login = ({ setLoginOpen, setRegisterOpen }) => {
             />
           </svg>
         </div>
-        <h3 className={styles.loginBlock__title}>Вход</h3>
-        <form className={styles.loginBlock__form}>
-          <div className={styles.loginBlock__formInputs}>
-            <input
-              className={styles.loginBlock__formInputs__item}
-              type="text"
-              placeholder="Логин"
-            />
-            <input
-              className={styles.loginBlock__formInputs__item}
-              type="password"
-              placeholder="Пароль"
-            />
-          </div>
-          <button className={styles.loginBlock__formBtn} type="button">
+        <h3 className={styles.registerBlock__title}>Регистрация</h3>
+        <form className={styles.registerBlock__form}>
+          <input
+            className={styles.registerBlock__formInput}
+            type="text"
+            placeholder="ФИО"
+          />
+          <input
+            className={styles.registerBlock__formInput}
+            type="text"
+            placeholder="Телефон"
+          />
+          <input
+            className={styles.registerBlock__formInput}
+            type="text"
+            placeholder="Email"
+          />
+          <input
+            className={styles.registerBlock__formInput}
+            type="password"
+            placeholder="Пароль"
+          />
+          <input
+            className={styles.registerBlock__formInput}
+            type="password"
+            placeholder="Повторите пароль"
+          />
+          <button className={styles.registerBlock__formBtn} type="button">
             Войти
           </button>
         </form>
-        <button
-          className={styles.loginBlock__btn}
-          onClick={() => {
-            setLoginOpen(false);
-            setRegisterOpen(true);
-          }}
-        >
-          Зарегистрироваться
-        </button>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 @import '../../assets/scss/main.scss';
 
-.login {
+.register {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -17,7 +17,7 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 140px;
+    top: 100px;
     padding: 50px 60px;
 
     width: 574px;
@@ -44,24 +44,18 @@
     &__form {
       display: flex;
       flex-direction: column;
-      row-gap: 180px;
-      margin-bottom: 30px;
+      row-gap: 26px;
+      margin-bottom: 46px;
 
-      &Inputs {
-        display: flex;
-        flex-direction: column;
-        row-gap: 26px;
+      &Input {
+        border-radius: 12px;
+        border: 1.5px solid $accent-color;
+        height: 60px;
+        padding: 15px 39px;
 
-        &__item {
-          border-radius: 12px;
-          border: 1.5px solid $accent-color;
-          height: 60px;
-          padding: 15px 39px;
-
-          color: $text-color-first;
-          font-size: 25px;
-          font-weight: 400;
-        }
+        color: $text-color-first;
+        font-size: 25px;
+        font-weight: 400;
       }
 
       &Btn {
@@ -74,22 +68,11 @@
         font-weight: 700;
       }
     }
-
-    &__btn {
-      color: $text-color-first;
-      font-size: 25px;
-      font-weight: 400;
-      transition: all 0.2s;
-
-      &:hover {
-        opacity: 0.7;
-      }
-    }
   }
 }
 
 @media (max-width: 850px) {
-  .login {
+  .register {
     &Block {
       width: 90%;
       padding: 28px 36px;
@@ -108,18 +91,14 @@
       }
 
       &__form {
-        row-gap: 110px;
-        margin-bottom: 25px;
+        row-gap: 16px;
+        margin-bottom: 28px;
 
-        &Inputs {
-          row-gap: 16px;
+        &Input {
+          height: 37px;
+          padding: 10px 23px;
 
-          &__item {
-            height: 37px;
-            padding: 10px 23px;
-
-            font-size: 16px;
-          }
+          font-size: 16px;
         }
 
         &Btn {

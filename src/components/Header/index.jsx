@@ -6,6 +6,7 @@ import styles from './Header.module.scss';
 import avatar from '../../assets/img/photo/avatar.jpeg';
 import { Notification } from '../Notification';
 import { Login } from '../Login';
+import { Register } from '../Register';
 
 const setActive = ({ isActive }) => (isActive ? styles.active : '');
 
@@ -13,7 +14,8 @@ export const Header = () => {
   const notificationRef = React.useRef();
   const [notificationOpen, setNotificationOpen] = React.useState(false);
 
-  const [loginOpen, setLoginOpen] = React.useState(true);
+  const [loginOpen, setLoginOpen] = React.useState(false);
+  const [registerOpen, setRegisterOpen] = React.useState(false);
 
   React.useEffect(() => {
     const handleClickNotificationOutside = event => {
@@ -169,7 +171,13 @@ export const Header = () => {
               >
                 Войти
               </button>
-              {loginOpen && <Login setLoginOpen={setLoginOpen} />}
+              {loginOpen && (
+                <Login
+                  setLoginOpen={setLoginOpen}
+                  setRegisterOpen={setRegisterOpen}
+                />
+              )}
+              {registerOpen && <Register setRegisterOpen={setRegisterOpen} />}
               {/* <img
                 src={avatar}
                 alt="avatar"
