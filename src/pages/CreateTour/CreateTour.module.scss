@@ -9,11 +9,210 @@
     flex-direction: row;
     column-gap: 21px;
     margin: 70px 0;
+    align-items: center;
 
     &__title {
       color: $text-color-first;
       font-size: 32px;
       font-weight: 700;
+    }
+  }
+
+  &Form {
+    display: flex;
+    flex-direction: column;
+
+    &Btn {
+      border-radius: 12px;
+      background-color: $accent-color;
+      width: 267px;
+      height: 58px;
+
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    &Block {
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      margin-bottom: 65px;
+
+      &__title {
+        color: $text-color-first;
+        font-size: 28px;
+        font-weight: 500;
+        margin-bottom: 9px;
+      }
+
+      input,
+      textarea {
+        border-radius: 9px;
+        border: 1px solid $accent-color;
+        padding: 11px 17px;
+
+        color: $text-color-first;
+        font-size: 18px;
+        font-weight: 400;
+        resize: none;
+      }
+
+      &__big_input {
+        height: 195px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &__middle_input {
+        height: 121px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &__text {
+        color: $text-color-third;
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      &__file {
+        display: flex;
+        justify-content: center;
+        width: 310px;
+        height: 150px;
+        border-radius: 9px;
+        border: 1px solid $accent-color;
+        cursor: pointer;
+      }
+
+      &__local {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        align-items: center;
+
+        &Text {
+          color: $text-color-second;
+          font-size: 18px;
+          font-weight: 400;
+        }
+
+        button {
+          border-radius: 9px;
+          background-color: $accent-color;
+          width: 67px;
+          height: 43px;
+
+          color: #fff;
+          font-size: 18px;
+          font-weight: 700;
+        }
+
+        &Btn {
+          border-radius: 9px;
+          border: 1px solid $accent-color;
+          width: 67px;
+          height: 43px;
+
+          color: $text-color-second;
+          font-size: 18px;
+          font-weight: 700;
+        }
+      }
+
+      &__warning {
+        display: flex;
+        flex-direction: row;
+        column-gap: 19px;
+
+        &Icon {
+          display: flex;
+          justify-content: center;
+          min-width: 35px;
+          min-height: 35px;
+          max-width: 35px;
+          max-height: 35px;
+
+          border-radius: 3px;
+          background-color: $accent-color;
+          box-shadow: 0px 11.375px 15.75px 0px rgba(17, 19, 35, 0.08);
+        }
+
+        &Text {
+          color: $text-color-third;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .create_tour {
+    &Top {
+      column-gap: 18px;
+      margin: 30px 0;
+
+      &__title {
+        font-size: 24px;
+      }
+    }
+
+    &Form {
+      &Btn {
+        border-radius: 7px;
+        width: 259px;
+        height: 33px;
+
+        font-size: 16px;
+      }
+
+      &Block {
+        row-gap: 15px;
+        margin-bottom: 44px;
+
+        &__title {
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+
+        input,
+        textarea {
+          padding: 10px 23px;
+        }
+
+        &__big_input {
+          height: 245px;
+        }
+
+        &__middle_input {
+          height: 166px;
+        }
+
+        &__text {
+          font-size: 16px;
+        }
+
+        &__file {
+          width: 100%;
+        }
+
+        &__local {
+          column-gap: 15px;
+        }
+
+        &__warning {
+          &Text {
+            font-size: 16px;
+          }
+        }
+      }
     }
   }
 }
