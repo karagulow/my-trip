@@ -1,12 +1,15 @@
-import styles from './Register.module.scss';
+import { IMaskInput } from 'react-imask';
+import styles from './AuthCheck.module.scss';
 
-export const Register = ({ setRegisterOpen, setAuthCheckOpen }) => {
+const codeMask = '000000';
+
+export const AuthCheck = ({ setAuthCheckOpen }) => {
   return (
     <div className={styles.register}>
       <div className={styles.registerBlock}>
         <div
           className={styles.registerBlock__close}
-          onClick={() => setRegisterOpen(false)}
+          onClick={() => setAuthCheckOpen(false)}
         >
           <svg
             width="20"
@@ -21,41 +24,19 @@ export const Register = ({ setRegisterOpen, setAuthCheckOpen }) => {
             />
           </svg>
         </div>
-        <h3 className={styles.registerBlock__title}>Регистрация</h3>
+        <h3 className={styles.registerBlock__title}>Подтверждение</h3>
         <form className={styles.registerBlock__form}>
-          <input
+          <IMaskInput
             className={styles.registerBlock__formInput}
+            mask={codeMask}
             type="text"
-            placeholder="ФИО"
+            placeholder="Введите код"
           />
-          <input
-            className={styles.registerBlock__formInput}
-            type="text"
-            placeholder="Телефон"
-          />
-          <input
-            className={styles.registerBlock__formInput}
-            type="text"
-            placeholder="Email"
-          />
-          <input
-            className={styles.registerBlock__formInput}
-            type="password"
-            placeholder="Пароль"
-          />
-          <input
-            className={styles.registerBlock__formInput}
-            type="password"
-            placeholder="Повторите пароль"
-          />
-          <button
-            className={styles.registerBlock__formBtn}
-            type="button"
-            onClick={() => {
-              setAuthCheckOpen(true);
-              setRegisterOpen(false);
-            }}
-          >
+          <p className={styles.registerBlock__formText}>
+            Сообщение с кодом проверки отправлено на ваш номер телефона. <br />
+            Повторный код можно получить через: <span>0:59</span>
+          </p>
+          <button className={styles.registerBlock__formBtn} type="button">
             Войти
           </button>
         </form>
