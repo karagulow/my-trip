@@ -5,12 +5,15 @@ import classNames from 'classnames';
 import styles from './Header.module.scss';
 import avatar from '../../assets/img/photo/avatar.jpeg';
 import { Notification } from '../Notification';
+import { Login } from '../Login';
 
 const setActive = ({ isActive }) => (isActive ? styles.active : '');
 
 export const Header = () => {
   const notificationRef = React.useRef();
   const [notificationOpen, setNotificationOpen] = React.useState(false);
+
+  const [loginOpen, setLoginOpen] = React.useState(true);
 
   React.useEffect(() => {
     const handleClickNotificationOutside = event => {
@@ -112,6 +115,9 @@ export const Header = () => {
                     styles.navRow__itemsList__item,
                     setActive
                   )}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Путешественнику
                 </NavLink>
@@ -121,6 +127,9 @@ export const Header = () => {
                     styles.navRow__itemsList__item,
                     setActive
                   )}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Организатору
                 </NavLink>
@@ -129,6 +138,9 @@ export const Header = () => {
                 <Link
                   to="/lk/tourist/id"
                   className={styles.navRow__itemsList__item}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
                 >
                   Избранное
                 </Link>
@@ -149,7 +161,15 @@ export const Header = () => {
             </div>
 
             <div className={styles.navRow__user}>
-              <button className={styles.navRow__userBtn}>Войти</button>
+              <button
+                className={styles.navRow__userBtn}
+                onClick={() => {
+                  setLoginOpen(true);
+                }}
+              >
+                Войти
+              </button>
+              {loginOpen && <Login setLoginOpen={setLoginOpen} />}
               {/* <img
                 src={avatar}
                 alt="avatar"

@@ -1,0 +1,134 @@
+@import '../../assets/scss/main.scss';
+
+.login {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 11;
+  overflow-y: hidden;
+
+  &Block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 140px;
+    padding: 50px 60px;
+
+    width: 574px;
+
+    background-color: #fff;
+    border: 3px dashed $accent-color;
+    border-radius: 8px;
+
+    &__close {
+      position: absolute;
+      right: 60px;
+      top: 60px;
+      cursor: pointer;
+    }
+
+    &__title {
+      color: $text-color-first;
+      font-size: 36px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 180px;
+      margin-bottom: 30px;
+
+      &Inputs {
+        display: flex;
+        flex-direction: column;
+        row-gap: 26px;
+
+        &__item {
+          border-radius: 12px;
+          border: 1.5px solid $accent-color;
+          height: 60px;
+          padding: 15px 39px;
+
+          color: $text-color-first;
+          font-size: 25px;
+          font-weight: 400;
+        }
+      }
+
+      &Btn {
+        border-radius: 12px;
+        background-color: $accent-color;
+        height: 60px;
+
+        color: #fff;
+        font-size: 24px;
+        font-weight: 700;
+      }
+    }
+
+    &__btn {
+      color: $text-color-first;
+      font-size: 25px;
+      font-weight: 400;
+      transition: all 0.2s;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) {
+  .login {
+    &Block {
+      width: 90%;
+      padding: 28px 36px;
+      top: 70px;
+
+      &__close {
+        right: 36px;
+        top: 36px;
+      }
+
+      &__title {
+        font-size: 24px;
+        margin-bottom: 32px;
+      }
+
+      &__form {
+        row-gap: 110px;
+        margin-bottom: 25px;
+
+        &Inputs {
+          row-gap: 16px;
+
+          &__item {
+            height: 37px;
+            padding: 10px 23px;
+
+            font-size: 16px;
+          }
+        }
+
+        &Btn {
+          height: 37px;
+          font-size: 16px;
+        }
+      }
+
+      &__btn {
+        font-size: 16px;
+      }
+    }
+  }
+}
